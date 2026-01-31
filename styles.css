@@ -16,11 +16,55 @@
     font-family: 'Libre Baskerville', serif;
 }
 
+/* Slider Container Enhancements */
+
 .slider-image-container .slCard {
     flex-shrink: 0;
-    width: 428px !important;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Desktop: Maintain original width */
+@media (min-width: 1024px) {
+    .slider-image-container .slCard {
+        width: 428px !important;
+    }
+}
+
+/* Enhanced Card Hover Effects */
+.slider-image-container .slCard:hover {
+    transform: translateY(-5px);
+}
+
+.slider-image-container .slCard img {
+    transition: transform 0.3s ease;
+}
+
+.slider-image-container .slCard:hover img {
+    transform: scale(1.05);
 }
 
 .activecard {
     background-color: #BF4423 !important;
+}
+
+/* Section 5 Leadership Cards - Responsive Fixes */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* lg screens: 3 columns with proper spacing */
+    .grid.grid-cols-3 > * {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    /* xl screens: 4 columns with original desktop width */
+    .grid.grid-cols-4 > * {
+        max-width: 294px;
+    }
+}
+
+@media (min-width:1370px) {
+    .container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+    }
 }
