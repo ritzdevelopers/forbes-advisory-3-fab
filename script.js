@@ -2112,6 +2112,7 @@ window.addEventListener('resize', () => {
 // Tab Content Data
 const tabContentData = [
     {
+        desination:"Chairman",
         name: "Arun Kumar Sharma",
         image: "img/founders/fond11.jpg",
         content: `He is a retired senior Indian Police Services (IPS) officer from the 1987 batch, Gujarat cadre, who has served in various positions including Additional Director of the Central Bureau of Investigation (CBI). He has held several positions of distinction and important responsibilities and has a remarkable record of service. He has been honoured with the President’s Police Medal for Distinguished Service and awarded the Indian Police Medal for Meritorious Service.  <br><br>
@@ -2121,6 +2122,7 @@ With over 34 years of expertise, he has held a pivotal role in investigations of
 He also lends his expertise in engaging with law enforcement agencies, adeptly addressing jurisdictional issues and overcoming roadblocks to expedite ongoing matters within the organisation. His extensive experience includes effectively managing public order and contributing to decision-making on vigilance and policy matters. He is currently handling and demonstrating a profound interest and active involvement in the real estate sector, which is the second-largest economy in India.`
     },
     {
+        desination:"Chairman (Project Development)",
         name: "Avdhesh Kumar Goel",
         image: "img/founders/fond44.jpg",
         content: `Dynamic executive leader with more than 35 years of distinguished expertise spanning finance, regulatory compliance, corporate governance, strategic project management, and real estate development. A highly accomplished Chartered Accountant, Cost & Works Accountant, and Company Secretary, Mr. Goel has provided strategic financial advisory, audit, and restructuring services to many renowned multinational and Indian corporations.  <br><br>
@@ -2132,6 +2134,7 @@ He brings in deep expertise in financial advisory, regulatory compliance, and co
         `
     },
     {
+        desination:"Director",
         name: "Mona Vij",
         image: "img/founders/fond21.jpg",
         content: `
@@ -2143,6 +2146,7 @@ In recent years, her focus and involvement have been in the real estate sector. 
 `
     },
     {
+        desination:"Director",
         name: "Mani Gupta",
         image: "img/founders/mani-gupta.jpg",
         content: `It is always a privilege of working alongside a professional whose depth of experience and instinct for excellence have consistently elevated our collective vision. With over a decade immersed in the real estate industry, spanning hospitality, healthcare, and large-scale development, Mani embodies a rare synthesis of entrepreneurial drive and meticulous execution. Her ability to lead complex initiatives, craft meaningful client experiences, and cultivate high-value relationships has been instrumental in shaping the stature and substance of our projects. <br><br>
@@ -2150,6 +2154,7 @@ She brings more than just expertise, she brings perspective. Whether it's steeri
 `
     },
     {
+        desination:"Vice President (Business Development)",
         name: "Aditya Goel",
         image: "img/founders/fond66.jpg",
         content: `
@@ -2167,8 +2172,14 @@ function initTabSwitchingContainer1() {
     const textElement1 = document.getElementById('tab-content-text');
     const imageElement1 = document.getElementById('tab-content-image');
     const mobileNameElement1 = document.querySelector('.tab-content-name-mobile');
+    const designationElement1 = document.getElementById('tab-content-designation');
 
     if (!container1Tabs.length || !textElement1 || !imageElement1) return;
+
+    // Set initial designation
+    if (designationElement1 && tabContentData[0] && tabContentData[0].desination) {
+        designationElement1.textContent = tabContentData[0].desination;
+    }
 
     function switchTabContainer1(tabIndex) {
         // Remove active class from all tabs in container 1
@@ -2196,6 +2207,10 @@ function initTabSwitchingContainer1() {
             mobileNameElement1.style.opacity = '0';
             mobileNameElement1.style.transform = 'translateY(-10px)';
         }
+        if (designationElement1) {
+            designationElement1.style.opacity = '0';
+            designationElement1.style.transform = 'translateY(-10px)';
+        }
 
         // Update content after fade out
         setTimeout(() => {
@@ -2203,11 +2218,13 @@ function initTabSwitchingContainer1() {
             imageElement1.src = tabData.image;
             imageElement1.alt = tabData.name;
             if (mobileNameElement1) mobileNameElement1.textContent = tabData.name;
+            if (designationElement1 && tabData.desination) designationElement1.textContent = tabData.desination;
 
             // Reset transform for fade in
             textElement1.style.transform = 'translateY(10px)';
             imageElement1.style.transform = 'translateY(10px)';
             if (mobileNameElement1) mobileNameElement1.style.transform = 'translateY(10px)';
+            if (designationElement1) designationElement1.style.transform = 'translateY(10px)';
 
             // Fade in and slide up new content
             requestAnimationFrame(() => {
@@ -2219,6 +2236,10 @@ function initTabSwitchingContainer1() {
                     if (mobileNameElement1) {
                         mobileNameElement1.style.opacity = '1';
                         mobileNameElement1.style.transform = 'translateY(0)';
+                    }
+                    if (designationElement1) {
+                        designationElement1.style.opacity = '1';
+                        designationElement1.style.transform = 'translateY(0)';
                     }
                 }, 10);
             });
@@ -2393,8 +2414,23 @@ function initTabSwitchingContainer3() {
     const textElement3 = document.getElementById('tab-content-text-3');
     const imageElement3 = document.getElementById('tab-content-image-3');
     const mobileNameElement3 = document.querySelector('.tab-content-name-mobile-3');
+    const designationElement3 = document.getElementById('tab-content-designation-3');
 
     if (!container3Tabs.length || !textElement3 || !imageElement3) return;
+
+    // Ensure initial content is visible
+    textElement3.style.opacity = '1';
+    textElement3.style.transform = 'translateY(0)';
+    imageElement3.style.opacity = '1';
+    imageElement3.style.transform = 'translateY(0)';
+    if (mobileNameElement3) {
+        mobileNameElement3.style.opacity = '1';
+        mobileNameElement3.style.transform = 'translateY(0)';
+    }
+    if (designationElement3) {
+        designationElement3.style.opacity = '1';
+        designationElement3.style.transform = 'translateY(0)';
+    }
 
     function switchTabContainer3(tabIndex) {
         // Map tabIndex to advisor data array (5->0, 6->1, 7->2)
@@ -2425,6 +2461,10 @@ function initTabSwitchingContainer3() {
             mobileNameElement3.style.opacity = '0';
             mobileNameElement3.style.transform = 'translateY(-10px)';
         }
+        if (designationElement3) {
+            designationElement3.style.opacity = '0';
+            designationElement3.style.transform = 'translateY(-10px)';
+        }
 
         // Update content after fade out
         setTimeout(() => {
@@ -2432,11 +2472,13 @@ function initTabSwitchingContainer3() {
             imageElement3.src = tabData.image;
             imageElement3.alt = tabData.name;
             if (mobileNameElement3) mobileNameElement3.textContent = tabData.name;
+            if (designationElement3 && tabData.desination) designationElement3.textContent = tabData.desination;
 
             // Reset transform for fade in
             textElement3.style.transform = 'translateY(10px)';
             imageElement3.style.transform = 'translateY(10px)';
             if (mobileNameElement3) mobileNameElement3.style.transform = 'translateY(10px)';
+            if (designationElement3) designationElement3.style.transform = 'translateY(10px)';
 
             // Fade in and slide up new content
             requestAnimationFrame(() => {
@@ -2448,6 +2490,10 @@ function initTabSwitchingContainer3() {
                     if (mobileNameElement3) {
                         mobileNameElement3.style.opacity = '1';
                         mobileNameElement3.style.transform = 'translateY(0)';
+                    }
+                    if (designationElement3) {
+                        designationElement3.style.opacity = '1';
+                        designationElement3.style.transform = 'translateY(0)';
                     }
                 }, 10);
             });
@@ -2473,6 +2519,16 @@ function initTabSwitchingContainer4() {
     const mobileNameElement4 = document.querySelector('.tab-content-name-mobile-4');
 
     if (!container4Tabs.length || !textElement4 || !imageElement4) return;
+
+    // Ensure initial content is visible
+    textElement4.style.opacity = '1';
+    textElement4.style.transform = 'translateY(0)';
+    imageElement4.style.opacity = '1';
+    imageElement4.style.transform = 'translateY(0)';
+    if (mobileNameElement4) {
+        mobileNameElement4.style.opacity = '1';
+        mobileNameElement4.style.transform = 'translateY(0)';
+    }
 
     function switchTabContainer4(tabIndex) {
         // Map tabIndex to advisor data array (8->3, 9->4, 10->5)
@@ -2549,8 +2605,27 @@ function initTabSwitchingContainer5() {
     const textElement5 = document.getElementById('tab-content-text-5');
     const imageElement5 = document.getElementById('tab-content-image-5');
     const mobileNameElement5 = document.querySelector('.tab-content-name-mobile-5');
+    const designationElement5 = document.getElementById('tab-content-designation-5');
 
     if (!container5Tabs.length || !textElement5 || !imageElement5) return;
+
+    // Ensure initial content is visible
+    textElement5.style.opacity = '1';
+    textElement5.style.transform = 'translateY(0)';
+    imageElement5.style.opacity = '1';
+    imageElement5.style.transform = 'translateY(0)';
+    if (mobileNameElement5) {
+        mobileNameElement5.style.opacity = '1';
+        mobileNameElement5.style.transform = 'translateY(0)';
+    }
+    if (designationElement5) {
+        designationElement5.style.opacity = '1';
+        designationElement5.style.transform = 'translateY(0)';
+        // Set initial designation for Subhal Garg (index 6 in advisorTabContentData)
+        if (advisorTabContentData[6] && advisorTabContentData[6].desination) {
+            designationElement5.textContent = advisorTabContentData[6].desination;
+        }
+    }
 
     function switchTabContainer5(tabIndex) {
         // Map tabIndex to advisor data array (11->6, 12->7)
@@ -2581,6 +2656,10 @@ function initTabSwitchingContainer5() {
             mobileNameElement5.style.opacity = '0';
             mobileNameElement5.style.transform = 'translateY(-10px)';
         }
+        if (designationElement5) {
+            designationElement5.style.opacity = '0';
+            designationElement5.style.transform = 'translateY(-10px)';
+        }
 
         // Update content after fade out
         setTimeout(() => {
@@ -2588,11 +2667,13 @@ function initTabSwitchingContainer5() {
             imageElement5.src = tabData.image;
             imageElement5.alt = tabData.name;
             if (mobileNameElement5) mobileNameElement5.textContent = tabData.name;
+            if (designationElement5 && tabData.desination) designationElement5.textContent = tabData.desination;
 
             // Reset transform for fade in
             textElement5.style.transform = 'translateY(10px)';
             imageElement5.style.transform = 'translateY(10px)';
             if (mobileNameElement5) mobileNameElement5.style.transform = 'translateY(10px)';
+            if (designationElement5) designationElement5.style.transform = 'translateY(10px)';
 
             // Fade in and slide up new content
             requestAnimationFrame(() => {
@@ -2604,6 +2685,10 @@ function initTabSwitchingContainer5() {
                     if (mobileNameElement5) {
                         mobileNameElement5.style.opacity = '1';
                         mobileNameElement5.style.transform = 'translateY(0)';
+                    }
+                    if (designationElement5) {
+                        designationElement5.style.opacity = '1';
+                        designationElement5.style.transform = 'translateY(0)';
                     }
                 }, 10);
             });
