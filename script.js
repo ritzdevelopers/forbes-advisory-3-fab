@@ -2137,9 +2137,16 @@ He brings in deep expertise in financial advisory, regulatory compliance, and co
         content: `
        With over 25 years of extensive and diverse experience, she has worked in real estate, project management, marketing communication, and brand and business development. She has consistently demonstrated success in formulating strategies for brand launches and establishing a strong market presence, along with creating aspirational brand images post-launch.  <br><br>
 
-She is strong in innovation, having pioneered the concept of in-film movie tie-ups at India’s leading telecom operator, Airtel—a concept that was subsequently adopted by others within and beyond the industry. Additionally, she has established an international initiative that fosters innovation in the telecom sector among youth and has several other groundbreaking initiatives to her credit. <br><br>
+She is strong in innovation, having pioneered the concept of in-film movie tie-ups at India's leading telecom operator, Airtel—a concept that was subsequently adopted by others within and beyond the industry. Additionally, she has established an international initiative that fosters innovation in the telecom sector among youth and has several other groundbreaking initiatives to her credit. <br><br>
 
 In recent years, her focus and involvement have been in the real estate sector. Notably, she played a key role in securing the Indirapuram Habitat Centre project, a distinctive venture encompassing socio-cultural, recreational, and commercial aspects, spanning an expansive area of more than 2 million square feet. 
+`
+    },
+    {
+        name: "Mani Gupta",
+        image: "img/founders/mani-gupta.jpg",
+        content: `It is always a privilege of working alongside a professional whose depth of experience and instinct for excellence have consistently elevated our collective vision. With over a decade immersed in the real estate industry, spanning hospitality, healthcare, and large-scale development, Mani embodies a rare synthesis of entrepreneurial drive and meticulous execution. Her ability to lead complex initiatives, craft meaningful client experiences, and cultivate high-value relationships has been instrumental in shaping the stature and substance of our projects. <br><br>
+She brings more than just expertise, she brings perspective. Whether it's steering promotional strategy, guiding narrative development, or overseeing cross-functional programs, her presence ensures that every endeavor is thoughtful, innovative, and aligned with long-term impact. Her leadership continues to set a benchmark within our organization – quietly powerful, unwaveringly strategic, and always a step ahead.
 `
     },
     {
@@ -2150,20 +2157,13 @@ In recent years, her focus and involvement have been in the real estate sector. 
 
 His career spans sales strategy, luxury real estate marketing, business development, portfolio advisory, and transaction structuring across high-value residential assets. Known for a sharp reading of market cycles and disciplined decision-making, he has worked closely with discerning homeowners, investors, and strategic partners in the premium and luxury segments. <br><br>
 
-Aditya’s leadership is defined by clarity, discretion, and operational depth. Rather than scale through noise, he has focused on building trust-led systems and sustainable growth. Under his direction, Forbes Properties reflects stability, refined execution, and a mature approach to luxury real estate driven by long-term value creation.`
-    },
-    {
-        name: "Mani Gupta",
-        image: "img/founders/mani-gupta.jpg",
-        content: `It is always a privilege of working alongside a professional whose depth of experience and instinct for excellence have consistently elevated our collective vision. With over a decade immersed in the real estate industry, spanning hospitality, healthcare, and large-scale development, Mani embodies a rare synthesis of entrepreneurial drive and meticulous execution. Her ability to lead complex initiatives, craft meaningful client experiences, and cultivate high-value relationships has been instrumental in shaping the stature and substance of our projects. <br><br>
-She brings more than just expertise, she brings perspective. Whether it's steering promotional strategy, guiding narrative development, or overseeing cross-functional programs, her presence ensures that every endeavor is thoughtful, innovative, and aligned with long-term impact. Her leadership continues to set a benchmark within our organization – quietly powerful, unwaveringly strategic, and always a step ahead.
-`
+Aditya's leadership is defined by clarity, discretion, and operational depth. Rather than scale through noise, he has focused on building trust-led systems and sustainable growth. Under his direction, Forbes Properties reflects stability, refined execution, and a mature approach to luxury real estate driven by long-term value creation.`
     }
 ];
 
-// Tab Switching Functionality - Container 1 (tabs 0, 1, 2)
+// Tab Switching Functionality - Container 1 (all 5 tabs: 0, 1, 2, 3, 4)
 function initTabSwitchingContainer1() {
-    const container1Tabs = document.querySelectorAll('.tab-card[data-tab="0"], .tab-card[data-tab="1"], .tab-card[data-tab="2"]');
+    const container1Tabs = document.querySelectorAll('.tab-card[data-tab="0"], .tab-card[data-tab="1"], .tab-card[data-tab="2"], .tab-card[data-tab="3"], .tab-card[data-tab="4"]');
     const textElement1 = document.getElementById('tab-content-text');
     const imageElement1 = document.getElementById('tab-content-image');
     const mobileNameElement1 = document.querySelector('.tab-content-name-mobile');
@@ -2171,7 +2171,7 @@ function initTabSwitchingContainer1() {
     if (!container1Tabs.length || !textElement1 || !imageElement1) return;
 
     function switchTabContainer1(tabIndex) {
-        // Remove active class from container 1 tabs only
+        // Remove active class from all tabs in container 1
         container1Tabs.forEach((tab) => {
             const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
             if (tabDataIndex === tabIndex) {
@@ -2225,11 +2225,11 @@ function initTabSwitchingContainer1() {
         }, 300);
     }
 
-    // Add click event listeners to container 1 tabs
+    // Add click event listeners to all tabs in container 1
     container1Tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             const tabIndex = parseInt(tab.getAttribute('data-tab'));
-            if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex <= 2) {
+            if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex <= 4) {
                 switchTabContainer1(tabIndex);
             }
         });
@@ -2311,7 +2311,7 @@ function initTabSwitchingContainer2() {
     });
 }
 
-// Advisor Tab Content Data
+// Advisor Tab Content Data (8 advisors)
 const advisorTabContentData = [
     {
         name: "Anil Kumar Yadav",
@@ -2339,10 +2339,55 @@ His expertise in economic research and policy analysis makes him an invaluable a
 With over thirty years of experience in the real estate industry, Rakesh Kumar Jain has been instrumental in shaping some of India's most significant real estate developments. His tenure at leading companies like Ansals and SuperTech has given him comprehensive insights into project development, market dynamics, and strategic planning. <br><br>
 
 His extensive experience across different segments of real estate development, from residential to commercial projects, provides valuable perspective on market trends, customer preferences, and operational excellence. His leadership and strategic vision continue to guide successful real estate ventures.`
+    },
+    {
+        name: "Rajiv K Anand",
+        image: "img/advisor/advisor2.jpg",
+        content: `Executive Director – FGP India. Rajiv K. Anand serves as Executive Director, bringing nearly three decades of experience across real estate development, capital advisory, and strategic planning. <br><br>
+
+With extensive expertise in real estate development and capital markets, Rajiv has been instrumental in shaping successful projects and investment strategies. His deep understanding of market dynamics and financial structures enables him to provide strategic guidance for complex real estate ventures. <br><br>
+
+His leadership in capital advisory has helped numerous projects secure funding and achieve financial success. Through his comprehensive approach to real estate development, he continues to drive innovation and excellence in the industry.`
+    },
+    {
+        name: "DGP Sanjay Kumar",
+        image: "img/advisor/advisor8.jpg",
+        content: `1985 batch Indian Police Service (IPS) Officer of the Himachal Pradesh cadre had got his Masters Degree in Physics with distinction from Delhi University in 1982. <br><br>
+
+With a distinguished career in law enforcement spanning several decades, DGP Sanjay Kumar brings exceptional leadership and strategic thinking to the advisory panel. His background in physics combined with extensive police service has equipped him with analytical skills and a deep understanding of complex organizational challenges. <br><br>
+
+His experience in managing large-scale operations and strategic planning makes him a valuable advisor for organizational development and risk management. Through his leadership, he has demonstrated commitment to excellence and public service.`
+    },
+    {
+        name: "Gen S. M. Mehta",
+        image: "img/advisor/advisor6.jpg",
+        content: `A highly decorated officer. An accomplished thinker and eminent engineer, he is a Fellow of the Institution of Electronics and Telecommunication Engineers (IETE). <br><br>
+
+Gen S. M. Mehta brings a unique combination of military leadership and technical expertise to the advisory panel. His distinguished military career, combined with his engineering background, provides him with exceptional problem-solving capabilities and strategic vision. <br><br>
+
+His recognition as a Fellow of IETE underscores his technical excellence and contributions to the field of electronics and telecommunications. Through his leadership and technical expertise, he continues to provide valuable insights for strategic planning and technological advancement.`
+    },
+    {
+        name: "Subhal Garg",
+        image: "img/advisor/advisor4.jpg",
+        content: `Executive Director - FGP India. A Chartered Accountant by training, Subhal brings over two decades of experience across finance, banking, infrastructure, and real estate. <br><br>
+
+With his strong financial background and extensive experience in banking and infrastructure, Subhal has been a key driver of strategic financial planning and execution. His expertise spans across multiple sectors, providing him with a comprehensive understanding of complex financial structures and market dynamics. <br><br>
+
+His leadership in finance and real estate has enabled successful project execution and strategic growth. Through his analytical approach and deep sector knowledge, he continues to contribute significantly to organizational success and industry advancement.`
+    },
+    {
+        name: "Vishal Sahni",
+        image: "img/advisor/advisor1.jpg",
+        content: `Senior Vice President Business Development. With over three decades of professional exposure across real estate, telecom, and strategic sales leadership. <br><br>
+
+Vishal Sahni brings extensive experience in business development and strategic sales across multiple industries. His three decades of professional experience have given him deep insights into market dynamics, customer relationships, and strategic growth initiatives. <br><br>
+
+His expertise in real estate and telecom sectors, combined with his leadership in business development, makes him an invaluable advisor for strategic planning and market expansion. Through his comprehensive understanding of business dynamics, he continues to drive growth and success.`
     }
 ];
 
-// Tab Switching Functionality - Container 3 (Advisors - tabs 5, 6, 7)
+// Tab Switching Functionality - Container 3 (Advisors Container 1 - tabs 5, 6, 7)
 function initTabSwitchingContainer3() {
     const container3Tabs = document.querySelectorAll('.tab-card[data-tab="5"], .tab-card[data-tab="6"], .tab-card[data-tab="7"]');
     const textElement3 = document.getElementById('tab-content-text-3');
@@ -2420,11 +2465,169 @@ function initTabSwitchingContainer3() {
     });
 }
 
-// Initialize both tab switching functions
+// Tab Switching Functionality - Container 4 (Advisors Container 2 - tabs 8, 9, 10)
+function initTabSwitchingContainer4() {
+    const container4Tabs = document.querySelectorAll('.tab-card[data-tab="8"], .tab-card[data-tab="9"], .tab-card[data-tab="10"]');
+    const textElement4 = document.getElementById('tab-content-text-4');
+    const imageElement4 = document.getElementById('tab-content-image-4');
+    const mobileNameElement4 = document.querySelector('.tab-content-name-mobile-4');
+
+    if (!container4Tabs.length || !textElement4 || !imageElement4) return;
+
+    function switchTabContainer4(tabIndex) {
+        // Map tabIndex to advisor data array (8->3, 9->4, 10->5)
+        const advisorIndex = tabIndex - 5;
+        
+        // Remove active class from container 4 tabs only
+        container4Tabs.forEach((tab) => {
+            const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
+            if (tabDataIndex === tabIndex) {
+                tab.classList.remove('deactiveTabCard');
+                tab.classList.add('activeTabCard');
+            } else {
+                tab.classList.remove('activeTabCard');
+                tab.classList.add('deactiveTabCard');
+            }
+        });
+
+        // Get the data for the selected tab
+        const tabData = advisorTabContentData[advisorIndex];
+        if (!tabData) return;
+
+        // Fade out and slide up current content
+        textElement4.style.opacity = '0';
+        textElement4.style.transform = 'translateY(-10px)';
+        imageElement4.style.opacity = '0';
+        imageElement4.style.transform = 'translateY(-10px)';
+        if (mobileNameElement4) {
+            mobileNameElement4.style.opacity = '0';
+            mobileNameElement4.style.transform = 'translateY(-10px)';
+        }
+
+        // Update content after fade out
+        setTimeout(() => {
+            textElement4.innerHTML = tabData.content;
+            imageElement4.src = tabData.image;
+            imageElement4.alt = tabData.name;
+            if (mobileNameElement4) mobileNameElement4.textContent = tabData.name;
+
+            // Reset transform for fade in
+            textElement4.style.transform = 'translateY(10px)';
+            imageElement4.style.transform = 'translateY(10px)';
+            if (mobileNameElement4) mobileNameElement4.style.transform = 'translateY(10px)';
+
+            // Fade in and slide up new content
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    textElement4.style.opacity = '1';
+                    textElement4.style.transform = 'translateY(0)';
+                    imageElement4.style.opacity = '1';
+                    imageElement4.style.transform = 'translateY(0)';
+                    if (mobileNameElement4) {
+                        mobileNameElement4.style.opacity = '1';
+                        mobileNameElement4.style.transform = 'translateY(0)';
+                    }
+                }, 10);
+            });
+        }, 300);
+    }
+
+    // Add click event listeners to container 4 tabs
+    container4Tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const tabIndex = parseInt(tab.getAttribute('data-tab'));
+            if (!isNaN(tabIndex) && tabIndex >= 8 && tabIndex <= 10) {
+                switchTabContainer4(tabIndex);
+            }
+        });
+    });
+}
+
+// Tab Switching Functionality - Container 5 (Advisors Container 3 - tabs 11, 12)
+function initTabSwitchingContainer5() {
+    const container5Tabs = document.querySelectorAll('.tab-card[data-tab="11"], .tab-card[data-tab="12"]');
+    const textElement5 = document.getElementById('tab-content-text-5');
+    const imageElement5 = document.getElementById('tab-content-image-5');
+    const mobileNameElement5 = document.querySelector('.tab-content-name-mobile-5');
+
+    if (!container5Tabs.length || !textElement5 || !imageElement5) return;
+
+    function switchTabContainer5(tabIndex) {
+        // Map tabIndex to advisor data array (11->6, 12->7)
+        const advisorIndex = tabIndex - 5;
+        
+        // Remove active class from container 5 tabs only
+        container5Tabs.forEach((tab) => {
+            const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
+            if (tabDataIndex === tabIndex) {
+                tab.classList.remove('deactiveTabCard');
+                tab.classList.add('activeTabCard');
+            } else {
+                tab.classList.remove('activeTabCard');
+                tab.classList.add('deactiveTabCard');
+            }
+        });
+
+        // Get the data for the selected tab
+        const tabData = advisorTabContentData[advisorIndex];
+        if (!tabData) return;
+
+        // Fade out and slide up current content
+        textElement5.style.opacity = '0';
+        textElement5.style.transform = 'translateY(-10px)';
+        imageElement5.style.opacity = '0';
+        imageElement5.style.transform = 'translateY(-10px)';
+        if (mobileNameElement5) {
+            mobileNameElement5.style.opacity = '0';
+            mobileNameElement5.style.transform = 'translateY(-10px)';
+        }
+
+        // Update content after fade out
+        setTimeout(() => {
+            textElement5.innerHTML = tabData.content;
+            imageElement5.src = tabData.image;
+            imageElement5.alt = tabData.name;
+            if (mobileNameElement5) mobileNameElement5.textContent = tabData.name;
+
+            // Reset transform for fade in
+            textElement5.style.transform = 'translateY(10px)';
+            imageElement5.style.transform = 'translateY(10px)';
+            if (mobileNameElement5) mobileNameElement5.style.transform = 'translateY(10px)';
+
+            // Fade in and slide up new content
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    textElement5.style.opacity = '1';
+                    textElement5.style.transform = 'translateY(0)';
+                    imageElement5.style.opacity = '1';
+                    imageElement5.style.transform = 'translateY(0)';
+                    if (mobileNameElement5) {
+                        mobileNameElement5.style.opacity = '1';
+                        mobileNameElement5.style.transform = 'translateY(0)';
+                    }
+                }, 10);
+            });
+        }, 300);
+    }
+
+    // Add click event listeners to container 5 tabs
+    container5Tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const tabIndex = parseInt(tab.getAttribute('data-tab'));
+            if (!isNaN(tabIndex) && (tabIndex === 11 || tabIndex === 12)) {
+                switchTabContainer5(tabIndex);
+            }
+        });
+    });
+}
+
+// Initialize all tab switching functions
 function initTabSwitching() {
     initTabSwitchingContainer1();
     initTabSwitchingContainer2();
     initTabSwitchingContainer3();
+    initTabSwitchingContainer4();
+    initTabSwitchingContainer5();
 }
 
 // Initialize tab switching on page load
