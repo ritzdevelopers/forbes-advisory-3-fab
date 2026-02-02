@@ -2158,7 +2158,7 @@ She brings more than just expertise, she brings perspective. Whether it's steeri
         desination: "Vice President",
         desination2: "(Business Development)",
         name: "Aditya Goel",
-        image: "img/founders/fond66.jpg",
+        image: "img/founders/Aditya-Goel2.jpg",
         content: `
        Aditya Goel, brings over 10 years of experience in the real estate sector, built through consistent execution and a long-term operating mindset. He holds an LLB and a BBA with a specialisation in Real Estate and Urban Infrastructure, grounding his leadership in both commercial acumen and regulatory understanding.  <br><br>
 
