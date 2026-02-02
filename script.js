@@ -2154,7 +2154,7 @@ Aditya’s leadership is defined by clarity, discretion, and operational depth. 
     },
     {
         name: "Mani Gupta",
-        image: "img/founders/fond31.jpg",
+        image: "img/founders/mani-gupta.jpg",
         content: `It is always a privilege of working alongside a professional whose depth of experience and instinct for excellence have consistently elevated our collective vision. With over a decade immersed in the real estate industry, spanning hospitality, healthcare, and large-scale development, Mani embodies a rare synthesis of entrepreneurial drive and meticulous execution. Her ability to lead complex initiatives, craft meaningful client experiences, and cultivate high-value relationships has been instrumental in shaping the stature and substance of our projects. <br><br>
 She brings more than just expertise, she brings perspective. Whether it's steering promotional strategy, guiding narrative development, or overseeing cross-functional programs, her presence ensures that every endeavor is thoughtful, innovative, and aligned with long-term impact. Her leadership continues to set a benchmark within our organization – quietly powerful, unwaveringly strategic, and always a step ahead.
 `
@@ -2311,10 +2311,120 @@ function initTabSwitchingContainer2() {
     });
 }
 
+// Advisor Tab Content Data
+const advisorTabContentData = [
+    {
+        name: "Anil Kumar Yadav",
+        image: "img/advisor/advisor5.jpg",
+        content: `A Senior legal professional recognized for judicial excellence, administrative leadership, and legal reform initiatives, including Mega Lok Adalats. <br><br>
+
+With extensive experience in the legal domain, Anil Kumar Yadav has demonstrated exceptional expertise in handling complex judicial matters and administrative responsibilities. His leadership has been instrumental in driving legal reform initiatives that have significantly improved access to justice and streamlined legal processes. <br><br>
+
+His commitment to judicial excellence and administrative efficiency has earned him recognition across the legal community. Through initiatives like Mega Lok Adalats, he has worked tirelessly to make justice more accessible and efficient for all citizens.`
+    },
+    {
+        name: "Dr. Arindam Chaudhuri",
+        image: "img/advisor/advisor9.jpg",
+        content: `M.A. Economics, Ph.D. Distinguished Economic Fellow specializing in advanced economic research and policy analysis. In-depth expertise in India's real estate trends. <br><br>
+
+Dr. Arindam Chaudhuri brings a wealth of academic and practical knowledge to economic analysis and policy formulation. His research has contributed significantly to understanding market dynamics, particularly in the real estate sector. With a Ph.D. in Economics, he combines rigorous academic training with practical insights into India's economic landscape. <br><br>
+
+His expertise in economic research and policy analysis makes him an invaluable advisor for strategic decision-making. He has a deep understanding of market trends, economic indicators, and their implications for real estate development and investment strategies.`
+    },
+    {
+        name: "Rakesh Kumar Jain",
+        image: "img/advisor/advisor3.jpg",
+        content: `Executive Director with a career spanning three decades. Rakesh has held key positions in India's premier real estate companies like Ansals, SuperTech. <br><br>
+
+With over thirty years of experience in the real estate industry, Rakesh Kumar Jain has been instrumental in shaping some of India's most significant real estate developments. His tenure at leading companies like Ansals and SuperTech has given him comprehensive insights into project development, market dynamics, and strategic planning. <br><br>
+
+His extensive experience across different segments of real estate development, from residential to commercial projects, provides valuable perspective on market trends, customer preferences, and operational excellence. His leadership and strategic vision continue to guide successful real estate ventures.`
+    }
+];
+
+// Tab Switching Functionality - Container 3 (Advisors - tabs 5, 6, 7)
+function initTabSwitchingContainer3() {
+    const container3Tabs = document.querySelectorAll('.tab-card[data-tab="5"], .tab-card[data-tab="6"], .tab-card[data-tab="7"]');
+    const textElement3 = document.getElementById('tab-content-text-3');
+    const imageElement3 = document.getElementById('tab-content-image-3');
+    const mobileNameElement3 = document.querySelector('.tab-content-name-mobile-3');
+
+    if (!container3Tabs.length || !textElement3 || !imageElement3) return;
+
+    function switchTabContainer3(tabIndex) {
+        // Map tabIndex to advisor data array (5->0, 6->1, 7->2)
+        const advisorIndex = tabIndex - 5;
+        
+        // Remove active class from container 3 tabs only
+        container3Tabs.forEach((tab) => {
+            const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
+            if (tabDataIndex === tabIndex) {
+                tab.classList.remove('deactiveTabCard');
+                tab.classList.add('activeTabCard');
+            } else {
+                tab.classList.remove('activeTabCard');
+                tab.classList.add('deactiveTabCard');
+            }
+        });
+
+        // Get the data for the selected tab
+        const tabData = advisorTabContentData[advisorIndex];
+        if (!tabData) return;
+
+        // Fade out and slide up current content
+        textElement3.style.opacity = '0';
+        textElement3.style.transform = 'translateY(-10px)';
+        imageElement3.style.opacity = '0';
+        imageElement3.style.transform = 'translateY(-10px)';
+        if (mobileNameElement3) {
+            mobileNameElement3.style.opacity = '0';
+            mobileNameElement3.style.transform = 'translateY(-10px)';
+        }
+
+        // Update content after fade out
+        setTimeout(() => {
+            textElement3.innerHTML = tabData.content;
+            imageElement3.src = tabData.image;
+            imageElement3.alt = tabData.name;
+            if (mobileNameElement3) mobileNameElement3.textContent = tabData.name;
+
+            // Reset transform for fade in
+            textElement3.style.transform = 'translateY(10px)';
+            imageElement3.style.transform = 'translateY(10px)';
+            if (mobileNameElement3) mobileNameElement3.style.transform = 'translateY(10px)';
+
+            // Fade in and slide up new content
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    textElement3.style.opacity = '1';
+                    textElement3.style.transform = 'translateY(0)';
+                    imageElement3.style.opacity = '1';
+                    imageElement3.style.transform = 'translateY(0)';
+                    if (mobileNameElement3) {
+                        mobileNameElement3.style.opacity = '1';
+                        mobileNameElement3.style.transform = 'translateY(0)';
+                    }
+                }, 10);
+            });
+        }, 300);
+    }
+
+    // Add click event listeners to container 3 tabs
+    container3Tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const tabIndex = parseInt(tab.getAttribute('data-tab'));
+            if (!isNaN(tabIndex) && tabIndex >= 5 && tabIndex <= 7) {
+                switchTabContainer3(tabIndex);
+            }
+        });
+    });
+}
+
 // Initialize both tab switching functions
 function initTabSwitching() {
     initTabSwitchingContainer1();
     initTabSwitchingContainer2();
+    initTabSwitchingContainer3();
 }
 
 // Initialize tab switching on page load

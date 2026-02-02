@@ -202,6 +202,13 @@
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
+/* Tab Content Transitions - Container 3 (Advisors) */
+#tab-content-text-3,
+#tab-content-image-3,
+.tab-content-name-mobile-3 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
 /* Initial state for smooth transitions */
 #tab-content-name,
 #tab-content-text,
@@ -210,7 +217,10 @@
 #tab-content-name-2,
 #tab-content-text-2,
 #tab-content-image-2,
-.tab-content-name-mobile-2 {
+.tab-content-name-mobile-2,
+#tab-content-text-3,
+#tab-content-image-3,
+.tab-content-name-mobile-3 {
     opacity: 1;
     transform: translateY(0);
 }
