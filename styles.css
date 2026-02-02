@@ -154,6 +154,8 @@
 
 .activeTabCard { 
     border: 1px solid #DFDFDF !important;
+    border-bottom: 3px solid #BF4423 !important;
+    /* border-radius: 15px !important; */
 }
 .activeTabCard div img {
     opacity: 1 !important;
@@ -166,15 +168,15 @@
 
 .activeTabCard h3 {
     color: #000000 !important;
-    transition: color 0.6s ease-in-out !important;
+    /* transition: color 0.6s ease-in-out !important; */
 }
 .deactiveTabCard h3 {
     color: #989696 !important;
-    transition: color 0.6s ease-in-out !important;
+    /* transition: color 0.6s ease-in-out !important; */
 }
 
 .activeTabCard .tabAbsDiv {
-    display: block !important;
+    display: hidden !important;
 }
 .deactiveTabCard {
     border: none !important;
@@ -184,11 +186,33 @@
     display: none !important;
 }
 
-/* Tab Content Transitions */
+/* Tab Content Transitions - Container 1 */
 #tab-content-name,
 #tab-content-text,
-#tab-content-image {
-    transition: opacity 0.5s ease-in-out;
+#tab-content-image,
+.tab-content-name-mobile {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Tab Content Transitions - Container 2 */
+#tab-content-name-2,
+#tab-content-text-2,
+#tab-content-image-2,
+.tab-content-name-mobile-2 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Initial state for smooth transitions */
+#tab-content-name,
+#tab-content-text,
+#tab-content-image,
+.tab-content-name-mobile,
+#tab-content-name-2,
+#tab-content-text-2,
+#tab-content-image-2,
+.tab-content-name-mobile-2 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Tab Container - Hide scrollbar on mobile but keep scroll functionality */

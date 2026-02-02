@@ -2161,19 +2161,20 @@ She brings more than just expertise, she brings perspective. Whether it's steeri
     }
 ];
 
-// Tab Switching Functionality
-function initTabSwitching() {
-    const tabCards = document.querySelectorAll('.tab-card');
-    const nameElement = document.getElementById('tab-content-name');
-    const textElement = document.getElementById('tab-content-text');
-    const imageElement = document.getElementById('tab-content-image');
+// Tab Switching Functionality - Container 1 (tabs 0, 1, 2)
+function initTabSwitchingContainer1() {
+    const container1Tabs = document.querySelectorAll('.tab-card[data-tab="0"], .tab-card[data-tab="1"], .tab-card[data-tab="2"]');
+    const textElement1 = document.getElementById('tab-content-text');
+    const imageElement1 = document.getElementById('tab-content-image');
+    const mobileNameElement1 = document.querySelector('.tab-content-name-mobile');
 
-    if (!tabCards.length || !nameElement || !textElement || !imageElement) return;
+    if (!container1Tabs.length || !textElement1 || !imageElement1) return;
 
-    function switchTab(tabIndex) {
-        // Remove active class from all tabs
-        tabCards.forEach((tab, index) => {
-            if (index === tabIndex) {
+    function switchTabContainer1(tabIndex) {
+        // Remove active class from container 1 tabs only
+        container1Tabs.forEach((tab) => {
+            const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
+            if (tabDataIndex === tabIndex) {
                 tab.classList.remove('deactiveTabCard');
                 tab.classList.add('activeTabCard');
             } else {
@@ -2186,33 +2187,134 @@ function initTabSwitching() {
         const tabData = tabContentData[tabIndex];
         if (!tabData) return;
 
-        // Fade out current content
-        nameElement.style.opacity = '0';
-        textElement.style.opacity = '0';
-        imageElement.style.opacity = '0';
+        // Fade out and slide up current content
+        textElement1.style.opacity = '0';
+        textElement1.style.transform = 'translateY(-10px)';
+        imageElement1.style.opacity = '0';
+        imageElement1.style.transform = 'translateY(-10px)';
+        if (mobileNameElement1) {
+            mobileNameElement1.style.opacity = '0';
+            mobileNameElement1.style.transform = 'translateY(-10px)';
+        }
 
         // Update content after fade out
         setTimeout(() => {
-            nameElement.textContent = tabData.name;
-            textElement.innerHTML = tabData.content;
-            imageElement.src = tabData.image;
-            imageElement.alt = tabData.name;
+            textElement1.innerHTML = tabData.content;
+            imageElement1.src = tabData.image;
+            imageElement1.alt = tabData.name;
+            if (mobileNameElement1) mobileNameElement1.textContent = tabData.name;
 
-            // Fade in new content
-            setTimeout(() => {
-                nameElement.style.opacity = '1';
-                textElement.style.opacity = '1';
-                imageElement.style.opacity = '1';
-            }, 50);
-        }, 250);
+            // Reset transform for fade in
+            textElement1.style.transform = 'translateY(10px)';
+            imageElement1.style.transform = 'translateY(10px)';
+            if (mobileNameElement1) mobileNameElement1.style.transform = 'translateY(10px)';
+
+            // Fade in and slide up new content
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    textElement1.style.opacity = '1';
+                    textElement1.style.transform = 'translateY(0)';
+                    imageElement1.style.opacity = '1';
+                    imageElement1.style.transform = 'translateY(0)';
+                    if (mobileNameElement1) {
+                        mobileNameElement1.style.opacity = '1';
+                        mobileNameElement1.style.transform = 'translateY(0)';
+                    }
+                }, 10);
+            });
+        }, 300);
     }
 
-    // Add click event listeners to all tabs
-    tabCards.forEach((tab, index) => {
+    // Add click event listeners to container 1 tabs
+    container1Tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
-            switchTab(index);
+            const tabIndex = parseInt(tab.getAttribute('data-tab'));
+            if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex <= 2) {
+                switchTabContainer1(tabIndex);
+            }
         });
     });
+}
+
+// Tab Switching Functionality - Container 2 (tabs 3, 4)
+function initTabSwitchingContainer2() {
+    const container2Tabs = document.querySelectorAll('.tab-card[data-tab="3"], .tab-card[data-tab="4"]');
+    const textElement2 = document.getElementById('tab-content-text-2');
+    const imageElement2 = document.getElementById('tab-content-image-2');
+    const mobileNameElement2 = document.querySelector('.tab-content-name-mobile-2');
+
+    if (!container2Tabs.length || !textElement2 || !imageElement2) return;
+
+    function switchTabContainer2(tabIndex) {
+        // Remove active class from container 2 tabs only
+        container2Tabs.forEach((tab) => {
+            const tabDataIndex = parseInt(tab.getAttribute('data-tab'));
+            if (tabDataIndex === tabIndex) {
+                tab.classList.remove('deactiveTabCard');
+                tab.classList.add('activeTabCard');
+            } else {
+                tab.classList.remove('activeTabCard');
+                tab.classList.add('deactiveTabCard');
+            }
+        });
+
+        // Get the data for the selected tab
+        const tabData = tabContentData[tabIndex];
+        if (!tabData) return;
+
+        // Fade out and slide up current content
+        textElement2.style.opacity = '0';
+        textElement2.style.transform = 'translateY(-10px)';
+        imageElement2.style.opacity = '0';
+        imageElement2.style.transform = 'translateY(-10px)';
+        if (mobileNameElement2) {
+            mobileNameElement2.style.opacity = '0';
+            mobileNameElement2.style.transform = 'translateY(-10px)';
+        }
+
+        // Update content after fade out
+        setTimeout(() => {
+            textElement2.innerHTML = tabData.content;
+            imageElement2.src = tabData.image;
+            imageElement2.alt = tabData.name;
+            if (mobileNameElement2) mobileNameElement2.textContent = tabData.name;
+
+            // Reset transform for fade in
+            textElement2.style.transform = 'translateY(10px)';
+            imageElement2.style.transform = 'translateY(10px)';
+            if (mobileNameElement2) mobileNameElement2.style.transform = 'translateY(10px)';
+
+            // Fade in and slide up new content
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    textElement2.style.opacity = '1';
+                    textElement2.style.transform = 'translateY(0)';
+                    imageElement2.style.opacity = '1';
+                    imageElement2.style.transform = 'translateY(0)';
+                    if (mobileNameElement2) {
+                        mobileNameElement2.style.opacity = '1';
+                        mobileNameElement2.style.transform = 'translateY(0)';
+                    }
+                }, 10);
+            });
+        }, 300);
+    }
+
+    // Add click event listeners to container 2 tabs
+    container2Tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const tabIndex = parseInt(tab.getAttribute('data-tab'));
+            if (!isNaN(tabIndex) && tabIndex >= 3 && tabIndex <= 4) {
+                switchTabContainer2(tabIndex);
+            }
+        });
+    });
+}
+
+// Initialize both tab switching functions
+function initTabSwitching() {
+    initTabSwitchingContainer1();
+    initTabSwitchingContainer2();
 }
 
 // Initialize tab switching on page load
