@@ -2204,7 +2204,7 @@ Rajiv provides strategic oversight and institutional guidance, supporting capita
     },
     {
         name: 'DGP Sanjay Kumar',
-        image: 'img/advisor/advisor8.jpg',
+        image: 'img/advisor/dgp-sanjay-kumar.jpg',
         designation: '',
         content: `Shri Sanjay Kumar, a 1985 batch Indian Police Service (IPS) officer of the Himachal Pradesh cadre, is a distinguished former senior police leader with more than three decades of service in law enforcement, internal security, vigilance, and disaster management at both state and national levels.<br><br>
 An alumnus of the University of Delhi, he holds a Master's degree in Physics (Electronics specialization) and was a National Science Talent Search Scholar. His strong academic and analytical background laid the foundation for a career marked by strategic leadership and operational excellence.<br><br>
