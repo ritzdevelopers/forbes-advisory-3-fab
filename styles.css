@@ -163,7 +163,7 @@
 }
 
 .advisor-tab-card { 
-    border-bottom: 1px solid #DFDFDF;
+    border: 1px solid #DFDFDF;
     transition: all 0.3s ease;
     background: white;
 }
