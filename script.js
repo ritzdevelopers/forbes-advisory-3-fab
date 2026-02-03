@@ -2184,21 +2184,23 @@ A national-level athlete and passionate speaker, Divam embodies the balance of b
         image: 'img/advisor/advisor3.jpg',
         designation: '',
         content: `With a career spanning three decades, Rakesh has held key positions in India's premier real estate companies like Ansals, SuperTech, Essel Realty, and Wave Infratech as the CEO and Executive Director. He has successfully set up and steered strategic real estate projects including townships, SEZs, commercial and residential portfolios, IT Parks, malls, and multiplexes. He has advised several senior-level boards at Unitech, Omaxe, Vatika, Group, Aerens in managing complex business situations, influencing internal and external stakeholders. He has driven multi-million-dollar projects, with a focus on strategic acquisitions, and legal and commercial success.<br><br>
-<span class="font-[600] text-base sm:text-lg md:text-xl">Expertise includes:</span><br><br>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Large Portfolio Management &amp; Risk Mitigation</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Project Design, Estimating &amp; Global Financing</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Mergers, Acquisitions, Joint Ventures &amp; Alliances</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Re-engineering Operations &amp; Process Improvements</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Operating / Capital Budgeting &amp; Strategic Planning</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Investment Analysis &amp; Multi-Cultural Negotiations</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Space Requirement Analysis &amp; Improving Asset Value</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Corporate Reorganizations &amp; Turnaround Management</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; text-align: left;">&bull; Cost Containment/Reduction &amp; Profit Enhancement</span>`
+<div class="flex flex-col gap-2 text-left">
+<span class="font-[600] text-base sm:text-lg md:text-xl">Expertise includes:</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Large Portfolio Management &amp; Risk Mitigation</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Project Design, Estimating &amp; Global Financing</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Mergers, Acquisitions, Joint Ventures &amp; Alliances</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Re-engineering Operations &amp; Process Improvements</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Operating / Capital Budgeting &amp; Strategic Planning</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Investment Analysis &amp; Multi-Cultural Negotiations</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Space Requirement Analysis &amp; Improving Asset Value</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Corporate Reorganizations &amp; Turnaround Management</span>
+<span class="text-base sm:text-lg leading-relaxed block text-left">&bull; Cost Containment/Reduction &amp; Profit Enhancement</span>
+</div>`
     },
     {
         name: 'Rajiv K Anand',
         image: 'img/advisor/advisor2.jpg',
-        designation: 'Executive Director – Forbes Global Properties India',
+        designation: 'Executive Director (FGP India)',
         content: `Rajiv K. Anand serves as Executive Director, bringing nearly three decades of experience across real estate development, capital advisory, and cross-border transactions. Trained as a civil engineer, he combines strong technical expertise with deep commercial acumen, contributing to the evaluation and advancement of complex real estate initiatives across India and select international markets.<br><br>
 Rajiv provides strategic oversight and institutional guidance, supporting capital structuring, risk assessment, and governance frameworks. Known for his measured judgment and market insight, he engages with partners and stakeholders to help shape opportunities grounded in financial discipline, structural integrity, and long-term sustainable value creation.`
     },
@@ -2223,14 +2225,16 @@ A Chartered Accountant by training, Subhal brings over two decades of experience
     {
         name: 'Vishal Sahni',
         image: 'img/advisor/advisor1.jpg',
-        designation: 'Senior Vice President - Business Development',
+        designation: 'Senior Vice President - <br> Business Development',
         content: `With over three decades of professional exposure across real estate, telecom, and strategic sales leadership, he is recognized as a market expansion specialist and high-value transaction expert. He has held key leadership and mediation roles with prominent real estate groups including Saya Group, Ansals, Omaxe, Raheja, Supertech, and Group Lodha. His expertise is in sales and positioning of large-scale townships, residential and commercial developments, IT parks, malls, and multiplexes, driving sustained revenue growth and strong market dominance.<br><br>
 His main focus is on Ultra High Networth Individuals (UHNI) and specializes in high-value luxury residential and commercial transactions across marquee developments. He also leads international real estate sales across Dubai, Singapore, and the USA, working with global luxury developers including DAMAC, Sobha, Emaar, BnW, and Danube. His international client base, particularly, is built through structured global exhibitions, targeted lead generation, and investor-focused outreach.<br><br>
-<strong class="text-base sm:text-lg md:text-xl">Core Expertise</strong><br><br>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; UHNI &amp; HNI Client Advisory and Consulting</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; High-Value &amp; Bulk Real Estate Deal Structuring</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; margin-bottom: 8px; text-align: left;">&bull; Strategic Sales Leadership &amp; Market Expansion</span>
-<span class="text-base sm:text-lg leading-relaxed" style="display: block; text-align: left;">&bull; Large Real Estate Portfolio Management</span>`
+<div class="flex flex-col gap-2 text-left">
+<strong class="text-base sm:text-lg md:text-xl">Core Expertise</strong>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; UHNI &amp; HNI Client Advisory and Consulting</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; High-Value &amp; Bulk Real Estate Deal Structuring</span>
+<span class="text-base sm:text-lg leading-relaxed block mb-1 text-left">&bull; Strategic Sales Leadership &amp; Market Expansion</span>
+<span class="text-base sm:text-lg leading-relaxed block text-left">&bull; Large Real Estate Portfolio Management</span>
+</div>`
     }
 ];
 
@@ -2251,7 +2255,7 @@ function updateAdvisorContent(index) {
     if (contentImage) contentImage.alt = advisor.name;
     if (contentName) contentName.textContent = advisor.name;
     if (contentDesignation) {
-        contentDesignation.textContent = advisor.designation || '';
+        contentDesignation.innerHTML = advisor.designation || '';
         contentDesignation.style.display = advisor.designation ? 'block' : 'none';
     }
 
