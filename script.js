@@ -2173,7 +2173,7 @@ const advisorsData = [
     {
         name: 'Divam Kapoor',
         image: 'img/advisor/divyan-kumar.jpg',
-        designation: 'Director',
+        designation: '',
         content: `A new-age real estate leader driving innovation, sustainability, and growth across India.<br><br>
 He continues Gulshan's 36+ year legacy through landmark projects like Gulshan Dynasty and One29, while leading DMA Infra in development, leasing, and consulting.<br><br>
 An Art of Living Teacher and CREDAI Youth Wing Leader, he promotes mindfulness, leadership, and sustainability — spearheading initiatives like the Kalpavriksh Movement, which planted over 2 million trees.<br><br>
